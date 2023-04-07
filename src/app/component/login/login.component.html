@@ -1,0 +1,36 @@
+<p [routerLink]="['/register']">login works!</p>
+<p (click)="onNavigate()">navigateByUrl</p>
+
+<input type="text" [(ngModel)]="txtLength"/>
+<input type="text" [(ngModel)]="txt2">
+<button type="submit" (click)="onSubmit()" [ngClass]="buildArray.length > 0 ? 'redClr' : 'blueClr'">Submit</button>
+{{lengthOfTxt}}
+{{reversetxt}}
+
+
+<!-- <div *ngIf = "buildArray.length > 0"> -->
+<div *ngIf = "buildArray.length > 0"> 
+    <table height="100%" width="100%" border="1">
+        <tr> 
+            <td>
+                First Name :
+            </td>
+            <td>
+                Last Name : 
+            </td>
+        </tr>
+        <tr *ngFor = "let elements of buildArray">
+            <td [ngStyle]="{ 'background-color': elements.color, 'width': '75%', 'height': '50px'}"> 
+                {{elements.fname}}
+            </td>
+            <td>    
+                {{elements.lname}}
+            </td>
+        </tr>
+    </table>
+<!-- First Name : {{elements.fname}};
+Last Name : {{elements.lname}} -->
+</div>
+<!-- {{txtLength?.length}}
+{{txtLength}} -->
+

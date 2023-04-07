@@ -1,0 +1,24 @@
+<mat-card>
+    <div>
+        <h1>Registration</h1>
+        </div>
+        <div style="text-align: center">
+  <form [formGroup]='reg' (ngSubmit)="OnRegistration()">
+    
+    <mat-form-field appearance="outline">
+    <mat-label>Name </mat-label> <input matInput type="text" formControlName="fname"> 
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Email : </mat-label> <input matInput type="email" formControlName="eml"> 
+        </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+    <mat-label>Password </mat-label> <input matInput type="password" formControlName="pass"> 
+    </mat-form-field>
+<div>
+    <button mat-raised-button color="primary" type="submit">Register</button>
+</div>
+  </form>
+</div>
+</mat-card>
